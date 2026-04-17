@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+
+<html lang="az">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASR Development Consulting Group</title>
+
+    <link rel="shortcut icon" href="dollar.png" type="image/x-icon">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+    <style>
+        :root {
+            --primary: #1D3A7A;
+            --gold: #D29D6E;
+            --dark: #0F172A;
+            --light: #F8FAFC;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+
+
+
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 10px 0;
+            transition: 0.4s;
+
+        }
+
+        .navbar-brand img {
+            max-height: 60px;
+            transition: 0.3s;
+
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--primary) !important;
+            font-size: 0.95rem;
+            margin: 0 12px;
+            position: relative;
+
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: 0.3s;
+
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+
+        .nav-link.dropdown-toggle::after {
+            display: none;
+
+        }
+
+
+
+
+
+        .hero {
+            padding: 180px 0 120px;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.1;
+
+        }
+
+        .hero-badge {
+            background: rgba(210, 157, 110, 0.1);
+            color: var(--gold);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+
+
+        .btn-asr {
+            background: var(--primary);
+            color: white;
+            padding: 14px 35px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: none;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(29, 58, 122, 0.2);
+            text-decoration: none;
+            display: inline-block;
+
+        }
+
+        .btn-asr:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(210, 157, 110, 0.3);
+
+        }
+
+        .btn-outline-asr {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 12px 33px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+
+        }
+
+        .btn-outline-asr:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+
+
+
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title h2 {
+            font-weight: 800;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 20px;
+
+        }
+
+
+
+
+
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: 0.4s;
+
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            border-color: var(--gold);
+
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            color: var(--gold);
+
+        }
+
+
+
+
+
+        .lead-card {
+            background: var(--primary);
+            border-radius: 30px;
+            padding: 60px;
+            color: white;
+            position: relative;
+            z-index: 2;
+
+        }
+
+        .lead-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+
+        }
+
+        .lead-input::placeholder {
+            color: #cbd5e1;
+        }
+
+
+
+
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            padding: 80px 0 20px;
+
+        }
+
+        .footer-logo {
+            max-height: 50px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-title {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+
+
+
+
+        .stat-item h3 {
+            color: var(--gold);
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+
+        .stat-item p {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+
+
+
+
+        .service-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .service-modal-overlay.active {
+            display: flex;
+
+        }
+
+        .service-modal-box {
+            background: white;
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 540px;
+            width: 90%;
+            position: relative;
+            animation: fadeInUp 0.3s ease;
+
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .service-modal-box h3 {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 20px;
+
+        }
+
+        .service-modal-box p {
+            color: #64748b;
+            line-height: 1.8;
+
+        }
+
+        .service-modal-box ul {
+            color: #64748b;
+            line-height: 2;
+            padding-left: 20px;
+
+        }
+
+        .btn-modal-close {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: none;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+
+        .btn-modal-close:hover {
+            background: var(--gold);
+
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .lead-card {
+                padding: 30px;
+            }
+
+            .service-modal-box {
+                padding: 30px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+
+                <img src="asr.png" alt="ASR Logo">
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#asrNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="asrNav">
+
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item"><a class="nav-link" href="#home">Ana Səhifə</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#about">Haqqımızda</a></li>
+
+                    <li class="nav-item dropdown">
+
+
+                    <li class="nav-item"><a class="nav-link" href="#services">Xidmətlər</a></li>
+
+                    <ul class="dropdown-menu border-0 shadow-lg">
+
+                        <li><a class="dropdown-item py-2" href="#services">Qida Təhlükəsizliyi</a></li>
+
+                        <li><a class="dropdown-item py-2" href="#services">Strateji İdarəetmə</a></li>
+
+                        <li><a class="dropdown-item py-2" href="#services">Hüquqi Ekspertiza</a></li>
+
+                    </ul>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#projects">Təcrübəmiz</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="#contact">Əlaqə</a></li>
+
+                    <li class="nav-item ms-lg-4">
+
+                        <button class="btn btn-asr" onclick="openDiagnostic()">Pulsuz Diaqnostika</button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate__animated animate__fadeInUp">
+                    <div class="hero-badge mb-3">#1 STRATEJİ MƏSLƏHƏTÇİ</div>
+                    <h1>Müəssisəniz üçün <br><span style="color:var(--gold)">Ağıllı Çözümlər.</span></h1>
+                    <p class="lead text-muted mt-4">15 illik təcrübə ilə Qida Təhlükəsizliyi, ISO standartları və
+                        Biznesin İdarəolunması sahəsində yanınızdayıq.</p>
+                    <div class="mt-5 d-flex gap-3">
+                        <a href="#services" class="btn btn-asr">Xidmətləri Kəşf Et</a>
+                        <a href="#about" class="btn btn-outline-asr">Haqqımızda</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block animate__animated animate__zoomIn">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                        class="img-fluid rounded-5 shadow-2xl" alt="Consulting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="about" class="py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 mb-4 mb-lg-0">
+
+                    <img src="ac.png" class="img-fluid rounded-5 shadow" alt="About ASR">
+
+                </div>
+
+                <div class="col-lg-6 ps-lg-5">
+
+                    <div class="section-title">
+
+                        <h2 class="display-5">Biz Kimik?</h2>
+
+                        <p class="lead text-primary fw-bold">ASR Development Consulting Group - Sizin Biznes
+                            Tərəfdaşınız.</p>
+
+                    </div>
+
+                    <p class="text-muted">2009-cu ildən bəri fəaliyyət göstərən komandamız, yerli və beynəlxalq bazarda
+                        müəssisələrin inkişafı üçün peşəkar həllər təqdim edir. Biz sadəcə məsləhət vermirik, prosesləri
+                        sizinlə birlikdə qururuq.</p>
+
+                    <ul class="list-unstyled mt-4">
+
+                        <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Beynəlxalq Sertifikatlı
+                            Auditorlar</li>
+
+                        <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Şəffaf və Nəticəyönümlü İş
+                            Prinsipi</li>
+
+                        <li class="mb-2"><i class="fas fa-check-circle text-gold me-2"></i> Dövlət Standartlarına Tam
+                            Uyğunluq</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="projects" class="bg-light">
+
+        <div class="container">
+
+            <div class="section-title text-center mb-5">
+
+                <h2 class="display-6">Rəqəmlərlə Təcrübəmiz</h2>
+
+                <p class="text-muted">İllər ərzində qazandığımız uğurlar müştərilərimizin etibarının nəticəsidir.</p>
+
+            </div>
+
+            <div class="row g-4 text-center">
+
+                <div class="col-md-3 col-6">
+
+                    <div class="stat-item p-4 bg-white rounded-4 shadow-sm">
+
+                        <h3>15+</h3>
+
+                        <p class="mb-0">İllik Təcrübə</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-6">
+
+                    <div class="stat-item p-4 bg-white rounded-4 shadow-sm">
+
+                        <h3>500+</h3>
+
+                        <p class="mb-0">Uğurlu Layihə</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-6">
+
+                    <div class="stat-item p-4 bg-white rounded-4 shadow-sm">
+
+                        <h3>120+</h3>
+
+                        <p class="mb-0">Daimi Müştəri</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-6">
+
+                    <div class="stat-item p-4 bg-white rounded-4 shadow-sm">
+
+                        <h3>30+</h3>
+
+                        <p class="mb-0">Ekspert Heyəti</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="pt-0">
+
+        <div class="container">
+
+            <div class="lead-card animate__animated animate__fadeIn">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-7">
+
+                        <h2 class="fw-800 mb-3">Auditə Hazırlıq Checklist-i</h2>
+
+                        <p class="opacity-75 mb-0">AQTA və beynəlxalq auditlərə hazır olmağınız üçün 10 addımlıq
+                            bələdçini pulsuz yükləyin.</p>
+
+                    </div>
+
+                    <div class="col-lg-5 mt-4 mt-lg-0">
+
+                        <form onsubmit="handleDownload(event)" class="d-flex gap-2">
+
+                            <input type="email" id="leadEmail" class="form-control lead-input"
+                                placeholder="E-mail ünvanınız" required>
+
+                            <button type="submit" class="btn btn-asr" style="background:var(--gold)">Yüklə</button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="services" class="bg-light">
+
+        <div class="container">
+
+            <div class="section-title text-center mb-5">
+
+                <h2 class="display-6">Ekspert Xidmətlərimiz</h2>
+
+                <p class="text-muted">Hər bir sahə üzrə dar ixtisaslaşmış texnoloq və auditorlarımızla xidmətinizdəyik.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box"><i class="fas fa-shield-virus"></i></div>
+
+                        <h4>Qida Təhlükəsizliyi</h4>
+
+                        <p>ISO 22000, HACCP, BRCGS və IFS tətbiqi. AQTA standartlarına tam uyğunluq.</p>
+
+                        <button class="btn p-0 text-primary fw-bold" onclick="openModal('qida')">Ətraflı Bax <i
+                                class="fas fa-arrow-right ms-2"></i></button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box"><i class="fas fa-brain"></i></div>
+
+                        <h4>Strateji İdarəetmə</h4>
+
+                        <p>MQ Sistemləri, Biznes Proseslərin Optimallaşdırılması və HR Audit.</p>
+
+                        <button class="btn p-0 text-primary fw-bold" onclick="openModal('strateji')">Ətraflı Bax <i
+                                class="fas fa-arrow-right ms-2"></i></button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="service-card">
+
+                        <div class="icon-box"><i class="fas fa-gavel"></i></div>
+
+                        <h4>İqtisadi-Hüquqi</h4>
+
+                        <p>RIA (Qanunvericilik Ekspertizası) və Feasibility analizlərinin hazırlanması.</p>
+
+                        <button class="btn p-0 text-primary fw-bold" onclick="openModal('huquqi')">Ətraflı Bax <i
+                                class="fas fa-arrow-right ms-2"></i></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="service-modal-overlay" id="serviceModal" onclick="closeModalOutside(event)">
+
+        <div class="service-modal-box" id="serviceModalBox">
+
+            <h3 id="modalTitle"></h3>
+
+            <div id="modalBody"></div>
+
+            <button class="btn-modal-close" onclick="closeModal()">Bağla</button>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-4">
+
+                    <img src="asr.png" class="footer-logo mb-4" alt="ASR Logo">
+
+                    <p>ASR Development Consulting Group - Strateji tərəfdaşınız. 2009-cu ildən başlayan peşəkar yol.</p>
+
+                    <div class="d-flex gap-3 mt-4">
+
+                        <a href="https://www.linkedin.com/company/acon-consulting-llc/"
+                            class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+
+                        <a href="https://www.facebook.com/profile.php?id=61552756360503"
+                            class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+
+                        <a href="https://www.instagram.com/acon_law_firm?igsh=MXR6ZXg2MWQwN2RyOA%3D%3D&utm_source=qr"
+                            class="btn btn-outline-light btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-2 offset-lg-1">
+
+                    <h5 class="footer-title">Linklər</h5>
+
+                    <a href="#about" class="footer-link">Haqqımızda</a>
+
+                    <a href="#services" class="footer-link">Xidmətlər</a>
+
+                    <a href="#projects" class="footer-link">Uğurlu Layihələr</a>
+
+                </div>
+
+                <div class="col-lg-2">
+
+                    <h5 class="footer-title">Resurslar</h5>
+
+                    <a href="https://acon.az/tr/bloq-2" class="footer-link">Bloq</a>
+
+                    <a href="#" class="footer-link">Sertifikatlar</a>
+
+                    <a href="#" class="footer-link" onclick="openDiagnostic()">Ekspert Anketi</a>
+
+                </div>
+
+                <div class="col-lg-3" id="contact">
+
+                    <h5 class="footer-title">Bizimlə Əlaqə</h5>
+
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Azure Business Center,
+26. kat, 165 B ofis,
+Bakü, Azerbaycan AZ 1025</p>
+
+                    <p><i class="fas fa-envelope me-2"></i> info@asrgroup.az</p>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="pt-5 mt-5 border-top border-secondary text-center">
+
+                <p class="mb-0">© 2026 ASR Development. Design by <strong>Ayhan Ismayılov</strong></p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <script>
+
+        const modalData = {
+
+            qida: {
+
+                title: 'Qida Təhlükəsizliyi',
+
+                body: `
+
+                    <p>Müəssisənizin qida təhlükəsizliyi sistemlərinin qurulması və sertifikasiyası üçün tam dəstək təqdim edirik.</p>
+
+                    <ul>
+
+                        <li>ISO 22000 tətbiqi və sertifikasiyası</li>
+
+                        <li>HACCP planının hazırlanması</li>
+
+                        <li>BRCGS və IFS standartlarına uyğunlaşma</li>
+
+                        <li>AQTA tələblərinə tam uyğunluq təmini</li>
+
+                        <li>Daxili audit və təlim proqramları</li>
+
+                        <li>Sənədləşmə sisteminin qurulması</li>
+
+                    </ul>
+
+                `
+
+            },
+
+            strateji: {
+
+                title: 'Strateji İdarəetmə',
+
+                body: `
+
+                    <p>Biznesinizin strateji idarəetmə sistemlərini müasir standartlara uyğun qurmaq üçün kompleks həllər təqdim edirik.</p>
+
+                    <ul>
+
+                        <li>Menecment Qaydaları (MQ) sistemlərinin tətbiqi</li>
+
+                        <li>Biznes proseslərinin optimallaşdırılması</li>
+
+                        <li>HR Audit və insan resursları idarəetməsi</li>
+
+                        <li>KPI sisteminin qurulması</li>
+
+                        <li>Korporativ idarəetmə strukturunun formalaşdırılması</li>
+
+                        <li>Strateji planlaşdırma sessiyaları</li>
+
+                    </ul>
+
+                `
+
+            },
+
+            huquqi: {
+
+                title: 'İqtisadi-Hüquqi Ekspertiza',
+
+                body: `
+
+                    <p>Qanunvericilik ekspertizası və iqtisadi təhlil sahəsində peşəkar dəstək göstəririk.</p>
+
+                    <ul>
+
+                        <li>RIA (Qanunvericilik Ekspertizası) hazırlanması</li>
+
+                        <li>Feasibility Study (İqtisadi Əsaslandırma) analizləri</li>
+
+                        <li>Normativ-hüquqi aktların ekspertizası</li>
+
+                        <li>İnvestisiya layihələrinin hüquqi qiymətləndirilməsi</li>
+
+                        <li>Biznes risklərinin hüquqi analizi</li>
+
+                        <li>Müqavilə və sənədlərin ekspertizası</li>
+
+                    </ul>
+
+                `
+
+            }
+
+        };
+
+
+
+        function openModal(type) {
+
+            const data = modalData[type];
+
+            document.getElementById('modalTitle').textContent = data.title;
+
+            document.getElementById('modalBody').innerHTML = data.body;
+
+            document.getElementById('serviceModal').classList.add('active');
+
+            document.body.style.overflow = 'hidden';
+
+        }
+
+
+
+        function closeModal() {
+
+            document.getElementById('serviceModal').classList.remove('active');
+
+            document.body.style.overflow = '';
+
+        }
+
+
+
+        function closeModalOutside(event) {
+
+            if (event.target === document.getElementById('serviceModal')) {
+
+                closeModal();
+
+            }
+
+        }
+
+
+
+        function openDiagnostic() {
+
+            const name = prompt("Zəhmət olmasa adınızı və müəssisə adını daxil edin:");
+
+            if (name) {
+
+                alert(`Hörmətli ${name}, müraciətiniz qəbul edildi. Ekspertlərimiz 24 saat ərzində sizinlə əlaqə saxlayacaq.`);
+
+            }
+
+        }
+
+
+
+        function handleDownload(event) {
+
+            event.preventDefault();
+
+            const email = document.getElementById('leadEmail').value;
+
+            if (email) {
+
+                const btn = event.target.querySelector('button');
+
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Hazırlanır...';
+
+
+
+                setTimeout(() => {
+
+                    alert("Təbriklər! 'Audit Hazırlıq Checklist-i' " + email + " ünvanına göndərildi.");
+
+                    btn.innerHTML = 'Yüklə';
+
+                    document.getElementById('leadEmail').value = '';
+
+                }, 2000);
+
+            }
+
+        }
+
+
+
+        window.addEventListener('scroll', function () {
+
+            const nav = document.querySelector('.navbar');
+
+            if (window.scrollY > 50) {
+
+                nav.style.padding = '5px 0';
+
+                nav.style.background = 'rgba(255,255,255,1)';
+
+            } else {
+
+                nav.style.padding = '10px 0';
+
+                nav.style.background = 'rgba(255,255,255,0.95)';
+
+            }
+
+        });
+
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+            anchor.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+
+                if (target) {
+
+                    window.scrollTo({
+
+                        top: target.offsetTop - 80,
+
+                        behavior: 'smooth'
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

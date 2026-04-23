@@ -213,7 +213,14 @@
       }
     }
 
-    /* BUTTONS */
+    .img-fluid{
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .img-fluid:hover{
+      transform: scale(1.05);
+    }
+    
     .btn-asr {
       background: transparent;
       color: var(--primary);
@@ -545,14 +552,14 @@
     }
 
     .contact-info-label {
-      font-size: 0.9rem;
+      font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 3px;
     }
-    .contact-info-label2{
+    .contact-info-label2 {
       margin-top: 10px;
       font-size: 0.9rem;
       font-weight: 700;
@@ -580,7 +587,7 @@
       font-size: 0.88rem;
       border: none;
       border-radius: 12px;
-      padding: 14px 34px;
+      padding: 14px 24px;
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -595,7 +602,6 @@
 
     /* Expert Pool Form Card */
     .expert-form-card {
-      height: 600px;
       background: #141f33;
       border-radius: 20px;
       padding: 40px 36px;
@@ -698,12 +704,16 @@
       vertical-align: middle;
     }
 
+  
     .map-wrapper {
       overflow: hidden;
-      height: 420px;
-      width: 100%;
-      padding: 0px;
-      border: 2px solid var(--dark);
+      height: 400px;
+      width: 88%;
+      max-width: 90%;
+      margin: 40px auto 50px auto;
+      border-radius: 20px;
+      border: 2px solid rgba(29,58,122,0.18);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.11);
     }
 
     .map-wrapper iframe {
@@ -713,7 +723,7 @@
       display: block
     }
 
-    /* FOOTER */
+    
     footer {
       background: var(--dark);
       color: #94a3b8;
@@ -1143,7 +1153,9 @@
     </div>
   </section>
 
- 
+  <!-- ============================================================
+       BLOG & RESOURCES SECTION
+       ============================================================ -->
   <section class="blog-section">
     <div class="container">
       <div class="blog-section-label">Bilik Mərkəzi</div>
@@ -1222,7 +1234,7 @@
     </div>
   </section>
 
-  
+
   <section class="checklist-section pt-0" style="padding-top:0!important;">
     <div class="container">
       <div class="checklist-card">
@@ -1249,7 +1261,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- SERVICES -->
   <section id="services" class="bg-light">
@@ -1332,16 +1343,15 @@
           </div>
 
           <div class="contact-info-item" onclick="document.querySelector('footer').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">
-  <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
-  <div>
-    <div class="contact-info-label2">İş Saatları Aşağdadır ↓
-</div>
-  </div>
-</div>
-          
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="contact-info-label2">İş Saatları Aşağdadır ↓</div>
+            </div>
+          </div>
+
           <hr class="contact-divider">
 
-          <button class="btn-whatsapp-contact" onclick="window.open('https://wa.me/994XXXXXXXXX','_blank')">
+          <button class="btn-whatsapp-contact" onclick="window.open('https://wa.me/994509901599','_blank')">
             <i class="fab fa-whatsapp"></i> WhatsApp ilə Yazın
           </button>
         </div>
@@ -1349,7 +1359,7 @@
         <!-- Right: Expert Pool Form -->
         <div class="col-lg-6 offset-lg-1">
           <div class="expert-form-card">
-            <h3>Ekspert Anketinə<br><em>Qoşulun</em></h3>
+            <h3>Ekspert Hovuzuna<br><em>Qoşulun</em></h3>
             <p class="expert-sub">Sahəsinin mütəxəssisi olub bizimlə işləmək istəyirsiniz? Anketinizi doldurun, komandamız sizinlə əlaqə quracaq.</p>
 
             <input type="text" class="expert-input" placeholder="Ad Soyadınız" id="expName">
@@ -1378,11 +1388,20 @@
   </section>
 
   <!-- GOOGLE MAP -->
-  <div class="map-wrapper">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.394445656146!2d49.874544550215674!3d40.37794964243654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d5b16f03049%3A0x8b233276e2e00004!2sAzure%20Business%20Center!5e0!3m2!1sen!2saz!4v1776539365299!5m2!1sen!2saz"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div style="background: var(--dark); padding: 50px 0 50px 0;">
+    <div style="text-align:center; margin-bottom: 28px;">
+    <p style="color:#fff; font-size:1rem; font-weight:700; margin:0 0 6px 0; letter-spacing:0.5px;">Ünvanımız:</p>
+      <p style="color:#fff; font-size:1rem; font-weight:700; margin:0 0 6px 0; letter-spacing:0.5px;">
+        <i class="fas fa-map-marker-alt" style="color:var(--gold); margin-right:8px;"></i>Azure Business Center, 26. kat, 165 B ofis
+      </p>
+      <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; margin:0;">Bakı, Azərbaycan AZ 1025</p>
+    </div>
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.394445656146!2d49.874544550215674!3d40.37794964243654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d5b16f03049%3A0x8b233276e2e00004!2sAzure%20Business%20Center!5e0!3m2!1sen!2saz!4v1776539365299!5m2!1sen!2saz"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -1415,12 +1434,14 @@
           <p><i class="fas fa-map-marker-alt me-2"></i> Azure Business Center, 26. kat, 165 B ofis, Bakı, Azərbaycan AZ
             1025</p>
           <p><i class="fas fa-envelope me-2"></i> info@asrgroup.az</p>
+
           <h6>İş Günləri və Saatları :</h6>
           <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px;">
             <i class="fas fa-clock me-1"></i> B.e–C: 08:00–17:30
           </div>
-<button class="btn-whatsapp" style="border-radius:12px;margin-bottom:12px;font-size:13px;padding:13px 20px;"
-            onclick="window.open('https://wa.me/994XXXXXXXXX','_blank')">
+          
+           <button class="btn-whatsapp" style="border-radius:12px;margin-bottom:12px;font-size:13px;padding:13px 20px;"
+            onclick="window.open('https://wa.me/994509901599','_blank')">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </button>
         </div>

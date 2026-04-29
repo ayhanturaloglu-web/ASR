@@ -7,8 +7,9 @@
   <title>ASR Development Consulting Group</title>
   <link rel="shortcut icon" href="img/dollar.png" type="image/x-icon">
 
+
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Noto+Sans:wght@300;400;600;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Roboto:wght@300;400;600;800&display=swap"
     rel="stylesheet">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -73,10 +74,12 @@
       height: 2px;
       transition: .3s
     }
-    .nav-link:hover{
+
+    .nav-link:hover {
       transition: .3s;
       color: var(--gold);
     }
+
     .nav-link:hover::after {
       width: 100%
     }
@@ -212,14 +215,85 @@
       }
     }
 
-    .img-fluid{
-      cursor: pointer;
-      transition: transform 0.3s;
+    /* HERO CAROUSEL */
+    #heroCarousel {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .12);
     }
-    .img-fluid:hover{
-      transform: scale(1.02);
+
+    #heroCarousel .carousel-item img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 24px;
     }
-    
+
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+      opacity: 1;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: .3s;
+    }
+
+    #heroCarousel .carousel-control-prev {
+      left: 12px;
+    }
+
+    #heroCarousel .carousel-control-next {
+      right: 12px;
+    }
+
+    #heroCarousel .carousel-control-prev:hover,
+    #heroCarousel .carousel-control-next:hover {
+      background: var(--gold);
+    }
+
+    #heroCarousel .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next-icon {
+      filter: invert(1) sepia(1) saturate(0) brightness(0);
+      width: 16px;
+      height: 16px;
+    }
+
+    #heroCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next:hover .carousel-control-next-icon {
+      filter: brightness(0) invert(1);
+    }
+
+    #heroCarousel .carousel-indicators {
+      bottom: 12px;
+    }
+
+    #heroCarousel .carousel-indicators [data-bs-target] {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.6);
+      border: none;
+      transition: .3s;
+    }
+
+    #heroCarousel .carousel-indicators .active {
+      background-color: var(--gold);
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    @media(max-width:768px) {
+      #heroCarousel .carousel-item img {
+        height: 260px;
+      }
+    }
+
+    /* BUTTONS */
     .btn-asr {
       background: transparent;
       color: var(--primary);
@@ -251,6 +325,15 @@
       display: inline-block;
       background: transparent;
       cursor: pointer
+    }
+
+    .img-fluid {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .img-fluid:hover {
+      transform: scale(1.02);
     }
 
     .btn-outline-asr:hover {
@@ -285,6 +368,110 @@
       transform: translateY(-10px);
       box-shadow: 0 28px 56px rgba(0, 0, 0, .1);
       border-color: var(--gold)
+    }
+
+    .sertifikatlar-section {
+      background-color: #ffffff;
+      /* Sən istədiyin kimi ağ fon */
+      padding: 60px 0;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    .section-title2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      /* Saytındakı tünd göy rəngə uyğun */
+      margin-bottom: 40px;
+      display: inline-block;
+      border-bottom: 3px solid #1a2b4a;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .sertifikat-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sertifikat-card {
+      background: #f8f9fa;
+      /* Kartların arxası bir az fərqlənsin deyə çox açıq boz */
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 30px 20px;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .sertifikat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .sertifikat-img-box {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background: url(img/s1.png) center/cover;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+
+    .sertifikat-img-box2 {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: url(img/s3.png) center/cover;
+    }
+
+    .sertifikat-img-box3 {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background: url(img/s2.png) center/cover;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .sertifikat-img-box4 {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background: url(img/s4.png) center/cover;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .sertifikat-card h3 {
+      font-size: 20px;
+      color: #f1b418;
+      /* Birinci şəkildəki sarı/qızılı rəng */
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .sertifikat-card p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+      font-weight: 500;
     }
 
     .icon-box {
@@ -327,9 +514,7 @@
       color: var(--primary)
     }
 
-    /* ============================================================
-       NEW CHECKLIST LEAD MAGNET SECTION
-       ============================================================ */
+
     .checklist-section {
       padding: 80px 0;
       background: #f1f3f6;
@@ -421,8 +606,8 @@
 
     .checklist-input {
       width: 100%;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.13);
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.13);
       border-radius: 12px;
       padding: 14px 18px;
       color: #fff;
@@ -476,9 +661,6 @@
       margin-right: 4px;
     }
 
-    /* ============================================================
-       NEW CONTACT + EXPERT POOL SECTION
-       ============================================================ */
     .contact-section {
       background: #0d1a2d;
       padding: 90px 0;
@@ -534,6 +716,17 @@
       margin-bottom: 24px;
     }
 
+    .contact-info-label2 {
+      margin-top: 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3px;
+      font-size: medium;
+    }
+
     .contact-info-icon {
       width: 42px;
       height: 42px;
@@ -558,15 +751,6 @@
       color: var(--gold);
       margin-bottom: 3px;
     }
-    .contact-info-label2 {
-      margin-top: 10px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 3px;
-    }
 
     .contact-info-value {
       color: #cbd5e1;
@@ -575,7 +759,7 @@
 
     .contact-divider {
       border: none;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       margin: 28px 0;
     }
 
@@ -626,8 +810,8 @@
 
     .expert-input {
       width: 100%;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 10px;
       padding: 13px 16px;
       color: #fff;
@@ -648,8 +832,8 @@
 
     .expert-select {
       width: 100%;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 10px;
       padding: 13px 16px;
       color: #94a3b8;
@@ -696,23 +880,23 @@
     .contact-deco-circle {
       width: 60px;
       height: 60px;
-      border: 2px solid rgba(210,157,110,0.3);
+      border: 2px solid rgba(210, 157, 110, 0.3);
       border-radius: 50%;
       display: inline-block;
       margin-left: 20px;
       vertical-align: middle;
     }
 
-  
+    /* MAP */
     .map-wrapper {
       overflow: hidden;
-      height: 400px;
+      height: 300px;
       width: 88%;
-      max-width: 90%;
+      max-width: 1100px;
       margin: 40px auto 50px auto;
       border-radius: 20px;
-      border: 2px solid rgba(29,58,122,0.18);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.11);
+      border: 2px solid rgba(29, 58, 122, 0.18);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.11);
     }
 
     .map-wrapper iframe {
@@ -722,7 +906,7 @@
       display: block
     }
 
-    
+    /* FOOTER */
     footer {
       background: var(--dark);
       color: #94a3b8;
@@ -814,13 +998,13 @@
       align-items: flex-start;
       gap: 16px;
       margin-bottom: 14px;
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0, 0, 0, 0.06);
       transition: .3s;
       cursor: pointer;
     }
 
     .doc-item:hover {
-      box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
       border-color: var(--gold);
       transform: translateY(-2px);
     }
@@ -864,7 +1048,7 @@
     /* Blog posts */
     .blog-post-item {
       padding: 20px 0;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       cursor: pointer;
       transition: .2s;
     }
@@ -910,7 +1094,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 1.5px solid rgba(255,255,255,0.35);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -962,7 +1146,7 @@
     }
 
     .service-modal-box {
-      background: #fff;
+      background: var(--primary);
       border-radius: 24px;
       padding: 46px;
       max-width: 520px;
@@ -984,14 +1168,14 @@
     }
 
     .service-modal-box h3 {
-      color: var(--primary);
+      color: #fff;
       font-weight: 800;
       margin-bottom: 18px
     }
 
     .service-modal-box p,
     .service-modal-box ul {
-      color: #64748b;
+      color: #cbd5e1;
       line-height: 1.85
     }
 
@@ -1001,11 +1185,11 @@
 
     .btn-modal-close {
       background: transparent;
-      color: var(--primary);
+      color: #fff;
       padding: 12px 30px;
       border-radius: 12px;
       font-weight: 700;
-      border: 2px solid var(--primary);
+      border: 2px solid rgba(255, 255, 255, 0.4);
       margin-top: 22px;
       cursor: pointer;
       transition: .3s
@@ -1021,16 +1205,67 @@
       .service-modal-box {
         padding: 28px
       }
+
       .checklist-card {
         padding: 32px 24px;
       }
+
       .contact-section h1 {
         font-size: 2rem;
       }
+
       .expert-form-card {
         padding: 28px 20px;
         margin-top: 40px;
       }
+    }
+
+
+
+
+    .sertifikat-img-box {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background: url(img/s1.png) center/cover;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+
+    .sertifikat-img-box2 {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: url(img/s3.png) center/cover;
+    }
+
+    .sertifikat-img-box3 {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background: url(img/s2.png) center/cover;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .sertifikat-img-box4 {
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      background: url(img/s4.png) center/cover;
+      background-color: #ffffff;
+      border: 1px dashed #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -1076,12 +1311,42 @@
             İdarəolunması sahəsində yanınızdayıq.</p>
           <div class="mt-5 d-flex gap-3 flex-wrap">
             <a href="#services" class="btn-asr">Xidmətləri Kəşf Et</a>
-            <a href="#about" class="btn-outline-asr">Haqqımızda</a>
+            <a href="#sertifikatlar" class="btn-outline-asr">Sertifikatlarımız</a>
           </div>
         </div>
-        <div class="col-lg-6 d-none d-lg-block animate__animated animate__zoomIn">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-            class="img-fluid rounded-5" style="box-shadow:0 20px 60px rgba(0,0,0,.12)" alt="Consulting">
+        <div class="col-lg-6 animate__animated animate__zoomIn">
+          <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                  alt="Consulting">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+                  alt="Food Safety">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80"
+                  alt="ISO Standards">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+                  alt="Business Management">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1092,7 +1357,8 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
-          <img src="img/ac.png" class="img-fluid rounded-5" style="box-shadow:0 16px 48px rgba(0,0,0,.1)" alt="About ASR">
+          <img src="img/ac.png" class="img-fluid rounded-5" style="box-shadow:0 16px 48px rgba(0,0,0,.1)"
+            alt="About ASR">
         </div>
         <div class="col-lg-6 ps-lg-5">
           <div class="section-title">
@@ -1112,6 +1378,48 @@
               Tam Uyğunluq</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <section id="sertifikatlar" class="sertifikatlar-section">
+    <div class="container">
+      <h2 class="section-title2">SERTİFİKATLAR</h2>
+      <div class="sertifikat-grid">
+
+        <div class="sertifikat-card">
+          <div class="sertifikat-img-box">
+          </div>
+          <h3>ISO 9001</h3>
+          <p>KEYFİYYƏT STANDARTI</p>
+        </div>
+
+        <div class="sertifikat-card">
+          <div class="sertifikat-img-box2">
+          </div>
+          <h3>HACCP</h3>
+          <p>QİDA TƏHLÜKƏSİZLİYİ</p>
+        </div>
+
+        <div class="sertifikat-card">
+          <div class="sertifikat-img-box3">
+          </div>
+          <h3>BRCGS</h3>
+          <p>QLOBAL SERTİFİKAT</p>
+        </div>
+
+        <div class="sertifikat-card">
+          <div class="sertifikat-img-box4">
+          </div>
+          <h3>AQTA RƏSMİ</h3>
+          <p>DÖVLƏT AGENTLİYİ</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -1233,7 +1541,9 @@
     </div>
   </section>
 
-
+  <!-- ============================================================
+       NEW CHECKLIST LEAD MAGNET (əvvəlki lead-card-ın yerinə)
+       ============================================================ -->
   <section class="checklist-section pt-0" style="padding-top:0!important;">
     <div class="container">
       <div class="checklist-card">
@@ -1306,6 +1616,9 @@
     </div>
   </div>
 
+  <!-- ============================================================
+       NEW CONTACT SECTION (xəritənin üstündə)
+       ============================================================ -->
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="row align-items-start">
@@ -1313,9 +1626,10 @@
         <div class="col-lg-5 mb-5 mb-lg-0">
           <div class="contact-label">Əlaqə</div>
           <h1>Bizimlə<br><em>Əlaqə</em><br>Saxlayın
-            <span class="contact-deco-circle d-none d-lg-inline-block"></span>
+
           </h1>
-          <p class="contact-desc">Suallarınız üçün bilavasitə əlaqə saxlayın. Nümayəndəmiz 24 saat ərzində sizinlə əlaqə quracaq.</p>
+          <p class="contact-desc">Suallarınız üçün bilavasitə əlaqə saxlayın. Nümayəndəmiz 24 saat ərzində sizinlə əlaqə
+            quracaq.</p>
 
           <div class="contact-info-item">
             <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -1329,7 +1643,7 @@
             <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
             <div>
               <div class="contact-info-label">Telefon</div>
-              <div class="contact-info-value">+994 12 XXX XX XX</div>
+              <div class="contact-info-value">+994 50 990 15 99</div>
             </div>
           </div>
 
@@ -1341,7 +1655,8 @@
             </div>
           </div>
 
-          <div class="contact-info-item" onclick="document.querySelector('footer').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">
+          <div class="contact-info-item" onclick="document.querySelector('footer').scrollIntoView({behavior:'smooth'})"
+            style="cursor:pointer;">
             <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
             <div>
               <div class="contact-info-label2">İş Saatları Aşağdadır ↓</div>
@@ -1359,7 +1674,8 @@
         <div class="col-lg-6 offset-lg-1">
           <div class="expert-form-card">
             <h3>Ekspert Hovuzuna<br><em>Qoşulun</em></h3>
-            <p class="expert-sub">Sahəsinin mütəxəssisi olub bizimlə işləmək istəyirsiniz? Anketinizi doldurun, komandamız sizinlə əlaqə quracaq.</p>
+            <p class="expert-sub">Sahəsinin mütəxəssisi olub bizimlə işləmək istəyirsiniz? Anketinizi doldurun,
+              komandamız sizinlə əlaqə quracaq.</p>
 
             <input type="text" class="expert-input" placeholder="Ad Soyadınız" id="expName">
             <input type="email" class="expert-input" placeholder="E-poçt ünvanı" id="expEmail">
@@ -1389,9 +1705,10 @@
   <!-- GOOGLE MAP -->
   <div style="background: var(--dark); padding: 50px 0 50px 0;">
     <div style="text-align:center; margin-bottom: 28px;">
-    <p style="color:#fff; font-size:1rem; font-weight:700; margin:0 0 6px 0; letter-spacing:0.5px;">Ünvanımız:</p>
+      <h4 style="color:#fff; font-size:1rem; font-weight:700; margin:0 0 6px 0; letter-spacing:0.5px;">Ünvan ↓</h4>
       <p style="color:#fff; font-size:1rem; font-weight:700; margin:0 0 6px 0; letter-spacing:0.5px;">
-        <i class="fas fa-map-marker-alt" style="color:var(--gold); margin-right:8px;"></i>Azure Business Center, 26. kat, 165 B ofis
+        <i class="fas fa-map-marker-alt" style="color:var(--gold); margin-right:8px;"></i>Azure Business Center, 26.
+        kat, 165 B ofis
       </p>
       <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; margin:0;">Bakı, Azərbaycan AZ 1025</p>
     </div>
@@ -1411,9 +1728,12 @@
           <img src="img/asr.png" class="footer-logo mb-4" alt="ASR Logo">
           <p>ASR Development Consulting Group — Strateji tərəfdaşınız. 2009-cu ildən başlayan peşəkar yol.</p>
           <div class="d-flex gap-3 mt-4">
-            <a href="https://www.linkedin.com/company/acon-consulting-llc/" class="social-icon-btn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61552756360503" class="social-icon-btn" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/acon_law_firm?igsh=MXR6ZXg2MWQwN2RyOA%3D%3D&utm_source=qr" class="social-icon-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/acon-consulting-llc/" class="social-icon-btn" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61552756360503" class="social-icon-btn" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/acon_law_firm?igsh=MXR6ZXg2MWQwN2RyOA%3D%3D&utm_source=qr"
+              class="social-icon-btn" target="_blank"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div class="col-lg-2 offset-lg-1">
@@ -1425,21 +1745,20 @@
         <div class="col-lg-2">
           <h5 class="footer-title">Resurslar</h5>
           <a href="https://acon.az/tr/bloq-2" class="footer-link">Bloq</a>
-          <a href="#" class="footer-link">Sertifikatlar</a>
+          <a href="#sertifikatlar" class="footer-link">Sertifikatlar</a>
           <a href="#contact" class="footer-link">Ekspert Anketi</a>
         </div>
         <div class="col-lg-3">
           <h5 class="footer-title">Bizimlə Əlaqə</h5>
-          <p><i class="fas fa-map-marker-alt me-2"></i> Azure Business Center, 26. kat, 165 B ofis, Bakı, Azərbaycan AZ
+          <p><i class="fas fa-map-marker-alt me-2 text-wan"></i> Azure Business Center, 26. kat, 165 B ofis, Bakı,
+            Azərbaycan AZ
             1025</p>
           <p><i class="fas fa-envelope me-2"></i> info@asrgroup.az</p>
 
-          <h6>İş Günləri və Saatları :</h6>
           <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px;">
             <i class="fas fa-clock me-1"></i> B.e–C: 08:00–17:30
           </div>
-          
-           <button class="btn-whatsapp" style="border-radius:12px;margin-bottom:12px;font-size:13px;padding:13px 20px;"
+          <button class="btn-whatsapp" style="border-radius:12px;margin-bottom:12px;font-size:13px;padding:13px 20px;"
             onclick="window.open('https://wa.me/994509901599','_blank')">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </button>
@@ -1451,7 +1770,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="jsb.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
